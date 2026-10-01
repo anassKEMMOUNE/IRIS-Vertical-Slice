@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_DB: iris
+      POSTGRES_USER: iris
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-iris-local-demo}
+    ports:
+      - "127.0.0.1:${DB_PORT:-55432}:5432"
+    volumes:
+      - iris-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U iris -d iris"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  app:
+    build: .
+    environment:
+      DATABASE_URL: postgresql://iris:${POSTGRES_PASSWORD:-iris-local-demo}@db:5432/iris
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./outputs:/app/outputs
+volumes:
+  iris-data:

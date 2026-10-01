@@ -1,0 +1,47 @@
+[
+  {
+    "source_id": "PEAT-A",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((540000 5700000,540150 5700000,540150 5700100,540000 5700100,540000 5700000))"
+  },
+  {
+    "source_id": "PEAT-B",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((540100 5700000,540200 5700000,540200 5700100,540100 5700100,540100 5700000))"
+  },
+  {
+    "source_id": "PEAT-COPY",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((540000 5700000,540150 5700000,540150 5700100,540000 5700100,540000 5700000))"
+  },
+  {
+    "source_id": "PEAT-SMALL-COVER",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((550000 5700000,550300 5700000,550300 5700100,550000 5700100,550000 5700000))"
+  },
+  {
+    "source_id": "PEAT-TOUCH",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((560300 5700000,560400 5700000,560400 5700100,560300 5700100,560300 5700000))"
+  }
+]

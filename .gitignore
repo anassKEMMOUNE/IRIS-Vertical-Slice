@@ -1,0 +1,14 @@
+.env
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+outputs/*
+!outputs/.gitkeep
+.DS_Store
+*.zip
+# Keep the reviewed assessment evidence; future runs remain ignored.
+!outputs/verification.md
+!outputs/explain.txt
+!outputs/915f80e1-01e8-4ef4-b734-791d783b0ff3/
+!outputs/915f80e1-01e8-4ef4-b734-791d783b0ff3/**

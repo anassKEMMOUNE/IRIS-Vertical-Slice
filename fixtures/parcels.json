@@ -1,0 +1,117 @@
+[
+  {
+    "source_id": "BESS-EXACT",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((500000 5700000,500200 5700000,500200 5700100,500000 5700100,500000 5700000))"
+  },
+  {
+    "source_id": "BESS-SMALL",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((510000 5700000,510199.99 5700000,510199.99 5700100,510000 5700100,510000 5700000))"
+  },
+  {
+    "source_id": "BESS-FAR",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((520000 5700000,520200 5700000,520200 5700100,520000 5700100,520000 5700000))"
+  },
+  {
+    "source_id": "BESS-LOW-VOLTAGE",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((530000 5700000,530200 5700000,530200 5700100,530000 5700100,530000 5700000))"
+  },
+  {
+    "source_id": "PEAT-EXACT",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((540000 5700000,540300 5700000,540300 5700100,540000 5700100,540000 5700000))"
+  },
+  {
+    "source_id": "PEAT-SMALL",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((550000 5700000,550299.99 5700000,550299.99 5700100,550000 5700100,550000 5700000))"
+  },
+  {
+    "source_id": "PEAT-NONE",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((560000 5700000,560300 5700000,560300 5700100,560000 5700100,560000 5700000))"
+  },
+  {
+    "source_id": "BAD-GEOM",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((500000 5700000,500100 5700100,500100 5700000,500000 5700100,500000 5700000))"
+  },
+  {
+    "source_id": "BAD-CRS",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "units": "m",
+    "geom": "POLYGON((500000 5700000,500100 5700000,500100 5700100,500000 5700100,500000 5700000))"
+  },
+  {
+    "source_id": "DUPLICATE",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((570000 5700000,570200 5700000,570200 5700100,570000 5700100,570000 5700000))"
+  },
+  {
+    "source_id": "DUPLICATE",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((570000 5700000,570200 5700000,570200 5700100,570000 5700100,570000 5700000))"
+  },
+  {
+    "source_id": "UNKNOWN-DATE",
+    "country_code": "DE",
+    "source_date": null,
+    "unknown_date": true,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((580000 5700000,580100 5700000,580100 5700100,580000 5700100,580000 5700000))"
+  },
+  {
+    "source_id": "BAD-COUNTRY",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POLYGON((580000 5700000,580100 5700000,580100 5700100,580000 5700100,580000 5700000))"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "source_id": "GRID-A",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POINT(501200 5700050)",
+    "voltage_kv": 110,
+    "voltage_units": "kV"
+  },
+  {
+    "source_id": "GRID-B",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POINT(501200 5700050)",
+    "voltage_kv": 220,
+    "voltage_units": "kV"
+  },
+  {
+    "source_id": "GRID-SMALL",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POINT(510200 5700050)",
+    "voltage_kv": 110,
+    "voltage_units": "kV"
+  },
+  {
+    "source_id": "GRID-FAR",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POINT(521200.01 5700050)",
+    "voltage_kv": 110,
+    "voltage_units": "kV"
+  },
+  {
+    "source_id": "GRID-LOW",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POINT(530200 5700050)",
+    "voltage_kv": 109.99,
+    "voltage_units": "kV"
+  },
+  {
+    "source_id": "GRID-MISSING",
+    "country_code": "DE",
+    "source_date": "2026-01-15",
+    "unknown_date": false,
+    "crs": "EPSG:25832",
+    "units": "m",
+    "geom": "POINT(500000 5700000)",
+    "voltage_kv": null,
+    "voltage_units": "kV"
+  }
+]

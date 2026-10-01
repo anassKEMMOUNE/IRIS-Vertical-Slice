@@ -1,0 +1,52 @@
+                                                                                              QUERY PLAN                                                                                              
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nested Loop  (cost=33.29..141.73 rows=3 width=101) (actual time=8.699..8.989 rows=1 loops=1)
+   Buffers: shared hit=43
+   ->  Seq Scan on entities p  (cost=0.00..3.52 rows=3 width=113) (actual time=1.148..1.158 rows=6 loops=1)
+         Filter: ((dataset = 'parcels'::text) AND (st_area(geom) >= '20000'::double precision))
+         Rows Removed by Filter: 12
+         Buffers: shared hit=1
+   ->  Limit  (cost=33.29..33.30 rows=1 width=230) (actual time=1.170..1.180 rows=0 loops=6)
+         Buffers: shared hit=42
+         ->  Sort  (cost=33.29..33.30 rows=1 width=230) (actual time=1.132..1.133 rows=0 loops=6)
+               Sort Key: (st_distance(p.geom, s.geom)), s.source_id COLLATE "C"
+               Sort Method: quicksort  Memory: 25kB
+               Buffers: shared hit=42
+               ->  Index Scan using entities_geom_idx on entities s  (cost=0.26..33.28 rows=1 width=230) (actual time=0.579..0.582 rows=0 loops=6)
+                     Index Cond: (geom && st_expand(p.geom, '1000'::double precision))
+                     Filter: ((voltage_kv >= '110'::double precision) AND (dataset = 'substations'::text) AND (country_code = p.country_code) AND st_dwithin(p.geom, geom, '1000'::double precision))
+                     Rows Removed by Filter: 2
+                     Buffers: shared hit=36
+ Planning:
+   Buffers: shared hit=408
+ Planning Time: 55.775 ms
+ Execution Time: 11.799 ms
+(21 rows)
+
+                                                                                                       QUERY PLAN                                                                                                        
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nested Loop  (cost=34.06..257.67 rows=3 width=159) (actual time=26.636..27.392 rows=1 loops=1)
+   Buffers: shared hit=5
+   ->  Seq Scan on entities p  (cost=0.00..3.52 rows=3 width=113) (actual time=0.017..0.025 rows=2 loops=1)
+         Filter: ((dataset = 'parcels'::text) AND (st_area(geom) >= '30000'::double precision))
+         Rows Removed by Filter: 16
+         Buffers: shared hit=1
+   ->  Aggregate  (cost=34.06..84.32 rows=1 width=73) (actual time=13.601..13.602 rows=0 loops=2)
+         Filter: (st_area(st_intersection(p.geom, st_unaryunion(st_collect(t.geom), '-1'::double precision), '-1'::double precision)) > '0'::double precision)
+         Rows Removed by Filter: 0
+         Buffers: shared hit=4
+         ->  Sort  (cost=33.29..33.30 rows=1 width=110) (actual time=8.845..8.847 rows=2 loops=2)
+               Sort Key: t.source_id COLLATE "C"
+               Sort Method: quicksort  Memory: 25kB
+               Buffers: shared hit=4
+               ->  Index Scan using entities_geom_idx on entities t  (cost=0.13..33.28 rows=1 width=110) (actual time=8.021..8.561 rows=2 loops=2)
+                     Index Cond: (geom && p.geom)
+                     Filter: ((dataset = 'peat'::text) AND (country_code = p.country_code) AND st_intersects(p.geom, geom) AND (st_area(st_intersection(p.geom, geom, '-1'::double precision)) > '0'::double precision))
+                     Rows Removed by Filter: 2
+                     Buffers: shared hit=4
+ Planning:
+   Buffers: shared hit=72
+ Planning Time: 4.639 ms
+ Execution Time: 28.791 ms
+(23 rows)
+
